@@ -1,71 +1,21 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
-
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
----
+# 🤵 Alfred, o agente Financeiro Inteligente com IA Generativa
 
 ## 1. Documentação do Agente
 
-## Caso de Uso
+Um asisstente de IA criado para ajudar no dia-a-dia com dúvidas sobre conceitos, funcionalidades e as modalidades de investimento existentes, feito para educar e organizar sua vida financeira, pensado para ser o seu ajudante pessoal em finanças.
 
-### Persona e Comunicação
+**O que o Alfred faz:**
+- ✅ Explica conceitos financeiros de forma simples
+- ✅ Usa dados do cliente como exemplos práticos
+- ✅ Responde dúvidas sobre produtos financeiros
+- ✅ Analisa padrões de gastos de forma educativa
 
-Como o agente se comporta e se comunica? O agente se porta de modo educado explicando conceitos financeiros de forma simples, usa os dados do usuário para exemplo e não recomenda investimentos
+**O que o Alfred NÃO faz:**
+- ❌ Não recomenda investimentos
+- ❌ Não acessa dados bancários sensíveis
+- ❌ Não substitui um profissional certificado
 
-- Nome: Alfred
-- Personalidade: Educado, usa exemplos práticos e objetivos, não julga o usuário por seus gastos
-- Comunicação: Informal, acessível, didático e paciente, como um professor jovem
-
-## Exemplos de linguagem
-
-- Saudação: "Olá! Sou o Alfred seu ajudante financeiro. Como posso ajudar hoje?"
-- Confirmação: "Entendi! Vou te explicar de forma simples."
-- Erro/Limitação: "Não posso recomendar investimentos, mas posso explicar como funcionam!"
-
-## Público-Alvo
-
-Iniciantes em finanças pessoais e interessados em aprender sobre economia.
-
-## Arquitetura
-
-```mermaid
-flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
-```
-
-### Componentes
-
-| Componente | Descrição |
-|------------|-----------|
-| Interface | Streamlit|
-| LLM                  | Ollama|
-| Base de Conhecimento | JSON/CSV mockados |
-
-## Segurança Anti-Alucinação
-
-### Estratégias
-
-- Usa somente os dados fornecidos em contexto.
-- Admite quando não sabe e algo.
-- Foca em apenas educar o usuário, não aconselha.
-
-### Limitações
-
-- Não recomenda investimentos.
-- Não acessa dados bancários sensíveis.
-- Não exclui a consulta com um profissional certificado.
+📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
 ---
 
@@ -82,9 +32,7 @@ flowchart TD
 
 ---
 
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
+## 3. Prompts do Agente
 
 - **System Prompt:** Instruções gerais de comportamento e restrições
 - **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
@@ -94,23 +42,18 @@ Documente os prompts que definem o comportamento do seu agente:
 
 ---
 
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+## 4. Aplicação Funcional
 
 📁 **Pasta:** [`src/app.py`](./src/app.py)
 
 ---
 
-### 5. Avaliação e Métricas
+## 5. Avaliação e Métricas
 
 Descreva como você avalia a qualidade do seu agente:
 
 **Métricas Sugeridas:**
+
 - Precisão/assertividade das respostas
 - Taxa de respostas seguras (sem alucinações)
 - Coerência com o perfil do cliente
@@ -119,22 +62,16 @@ Descreva como você avalia a qualidade do seu agente:
 
 ---
 
-### 6. Pitch
+### Qual problema seu agente resolve?
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+Muitas pessoas não tem noção do que são investimentos e não tem ou não tiveram uma educação financeira que pudesse ajudar com assuntos como economia, redução de gastos. O Alfred tem o papel de esclarecer dúvidas e e ser o seu professor nessa jornada.
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+### Como ele funciona na prática?
+
+Através da inclusão dos dados manualmente ou por meio de código ele ajuda e gera informações a respeito de suas finanças e dúvidas sobre investimentos, ou seja, ele não gera dados ou busca de novas fontes, ele apenas trabalha com o que foi informado.
+
+### Por que essa solução é inovadora?
+
+Através de conceitos simples e forma prática e didática ele vem para educar e ajudar os usuários sobre suas finanças e sobre o mundo dos investimentos, abrindo portas para novos conhecimentos.
 
 📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Dicas Finais
-
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
