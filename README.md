@@ -21,18 +21,52 @@ Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots
 Defina **o que** seu agente faz e **como** ele funciona:
 
 **Caso de Uso:**
-Qual problema financeiro ele resolve? Ajuda a organizar finanças e reduzir gastos e ensina conceitos básicos de finanças pessoais
- 
+Qual problema financeiro ele resolve? Ajuda a organizar finanças, reduzir gastos e ensina conceitos básicos de finanças pessoais
+
 **Persona e Tom de Voz:** 
 Como o agente se comporta e se comunica? O agente se porta de modo educado explicando conceitos financeiros de forma simples, usa os dados do usuário para exemplo e não recomenda investimentos
+
+- Nome: 
+- Personalidade: Educado e paciente, usa exemplos práticos e objetivos, não julga o usuário por seus gastos
+
+## Tom de comunicação
+
+Informal, acessível, didático e paciente, como um professor jovem
+
+## Exemplos de linguagem
+
+- Saudação: "Olá! Sou o Alfred seu ajudante financeiro. Como posso ajudar hoje?"
+- Confirmação: "Entendi! Vou te explicar de forma simples."
+- Erro/Limitação: "Não posso recomendar investimentos, mas posso explicar como funcionam!"
 
 **Público-Alvo**
 Iniciantes em finanças pessoais e interessados em aprender sobre economia
 
 **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
 
+```mermaid
+flowchart TD
+    A[Cliente] -->|Mensagem| B[Interface]
+    B --> C[LLM]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação]
+    E --> F[Resposta]
+```
+
+### Componentes
+
+| Componente | Descrição |
+|------------|-----------|
+| Interface | [ex: Chatbot em Streamlit] |
+| LLM | [ex: GPT-4 via API] |
+| Base de Conhecimento | JSON/CSV mockados |
+| Validação | [ex: Checagem de alucinações] |
+
 
 > **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+
+
 
 📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
