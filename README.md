@@ -78,6 +78,8 @@ flowchart TD
 | `produtos_financeiros.json` | JSON | Conhecer os produtos disponíveis para serem explicados o funcionamento ao cliente. |
 | `transacoes.csv` | CSV | Analisar padrões de gastos do cliente e usar estes dados de forma didática. |
 
+📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+
 ---
 
 ### 3. Prompts do Agente
