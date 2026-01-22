@@ -20,10 +20,19 @@ Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots
 
 Defina **o que** seu agente faz e **como** ele funciona:
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+**Caso de Uso:**
+Qual problema financeiro ele resolve? Ajuda a organizar finanças e reduzir gastos e ensina conceitos básicos de finanças pessoais
+ 
+**Persona e Tom de Voz:** 
+Como o agente se comporta e se comunica? O agente se porta de modo educado explicando conceitos financeiros de forma simples, usa os dados do usuário para exemplo e não recomenda investimentos
+
+**Público-Alvo**
+Iniciantes em finanças pessoais e interessados em aprender sobre economia
+
+**Arquitetura:** Fluxo de dados e integração com a base de conhecimento
+
+
+> **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
 
 📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
