@@ -14,24 +14,17 @@ Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots
 
 ---
 
-## O Que Você Deve Entregar
+## 1. Documentação do Agente
 
-### 1. Documentação do Agente
+## Caso de Uso
 
-Defina **o que** seu agente faz e **como** ele funciona:
+### Persona e Comunicação
 
-**Caso de Uso:**
-Qual problema financeiro ele resolve? Ajuda a organizar finanças, reduzir gastos e ensina conceitos básicos de finanças pessoais
-
-**Persona e Tom de Voz:** 
 Como o agente se comporta e se comunica? O agente se porta de modo educado explicando conceitos financeiros de forma simples, usa os dados do usuário para exemplo e não recomenda investimentos
 
-- Nome: 
-- Personalidade: Educado e paciente, usa exemplos práticos e objetivos, não julga o usuário por seus gastos
-
-## Tom de comunicação
-
-Informal, acessível, didático e paciente, como um professor jovem
+- Nome: Alfred
+- Personalidade: Educado, usa exemplos práticos e objetivos, não julga o usuário por seus gastos
+- Comunicação: Informal, acessível, didático e paciente, como um professor jovem
 
 ## Exemplos de linguagem
 
@@ -39,10 +32,11 @@ Informal, acessível, didático e paciente, como um professor jovem
 - Confirmação: "Entendi! Vou te explicar de forma simples."
 - Erro/Limitação: "Não posso recomendar investimentos, mas posso explicar como funcionam!"
 
-**Público-Alvo**
+## Público-Alvo
+
 Iniciantes em finanças pessoais e interessados em aprender sobre economia
 
-**Arquitetura:** Fluxo de dados e integração com a base de conhecimento
+## Arquitetura
 
 ```mermaid
 flowchart TD
@@ -58,34 +52,34 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
+| Interface | Streamlit|
+| LLM                  | Ollama|
 | Base de Conhecimento | JSON/CSV mockados |
-| Validação | [ex: Checagem de alucinações] |
 
+## Segurança Anti-Alucinação
 
-> **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+### Estratégias
 
+- Usa somente os dados fornecidos em contexto.
+- Admite quando não sabe e algo.
+- Foca em apenas educar o usuário, não aconselha.
 
+### Limitações
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+- Não recomenda investimentos.
+- Não acessa dados bancários sensíveis.
+- Não exclui a consulta com um profissional certificado.
 
 ---
 
-### 2. Base de Conhecimento
+## 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
+| Arquivo | Formato | Descrição para o agente|
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+| `historico_atendimento.csv` | CSV | Interações anteriores, para dar continuidade ao atendimento de forma eficiente. |
+| `perfil_investidor.json` | JSON | Personalizar explicações sobre dúvudas e necessidades de aprendizado do cliente. |
+| `produtos_financeiros.json` | JSON | Conhecer os produtos disponíveis para serem explicados o funcionamento ao cliente. |
+| `transacoes.csv` | CSV | Analisar padrões de gastos do cliente e usar estes dados de forma didática. |
 
 ---
 
