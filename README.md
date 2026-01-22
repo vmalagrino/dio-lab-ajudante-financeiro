@@ -5,12 +5,14 @@
 Um asisstente de IA criado para ajudar no dia-a-dia com dúvidas sobre conceitos, funcionalidades e as modalidades de investimento existentes, feito para educar e organizar sua vida financeira, pensado para ser o seu ajudante pessoal em finanças.
 
 **O que o Alfred faz:**
+
 - ✅ Explica conceitos financeiros de forma simples
 - ✅ Usa dados do cliente como exemplos práticos
 - ✅ Responde dúvidas sobre produtos financeiros
 - ✅ Analisa padrões de gastos de forma educativa
 
 **O que o Alfred NÃO faz:**
+
 - ❌ Não recomenda investimentos
 - ❌ Não acessa dados bancários sensíveis
 - ❌ Não substitui um profissional certificado
@@ -44,13 +46,32 @@ Um asisstente de IA criado para ajudar no dia-a-dia com dúvidas sobre conceitos
 
 ## 4. Aplicação Funcional
 
+### 4.1. Instalar Dependências
+
+```python
+pip install streamlit pandas requests
+```
+
+### 4.2. Executar o Alfred
+
+```python
+streamlit run src/app.py
+```
+
+### 4.3. Exemplo de uso
+
+
+
+
 📁 **Pasta:** [`src/app.py`](./src/app.py)
 
 ---
 
 ## 5. Avaliação e Métricas
 
-Descreva como você avalia a qualidade do seu agente:
+| teste | teste |
+|-------|-------|
+| valores| teste de valores|
 
 **Métricas Sugeridas:**
 
@@ -62,9 +83,11 @@ Descreva como você avalia a qualidade do seu agente:
 
 ---
 
+## 6. Pitch
+
 ### Qual problema seu agente resolve?
 
-Muitas pessoas não tem noção do que são investimentos e não tem ou não tiveram uma educação financeira que pudesse ajudar com assuntos como economia, redução de gastos. O Alfred tem o papel de esclarecer dúvidas e e ser o seu professor nessa jornada.
+Muitas pessoas não tem noção do que são os investimentos e não tem ou não tiveram uma educação financeira que pudesse ajudar com assuntos como economia, redução de gastos. O Alfred tem o papel de esclarecer dúvidas e e ser o seu professor nessa jornada.
 
 ### Como ele funciona na prática?
 
