@@ -69,11 +69,9 @@ streamlit run src/app.py
 
 ## 5. Avaliação e Métricas
 
-| teste | teste |
-|-------|-------|
-| valores| teste de valores|
-
-**Métricas Sugeridas:**
+|  teste  |  teste  |
+|---------|---------|
+| valores | valores |
 
 - Precisão/assertividade das respostas
 - Taxa de respostas seguras (sem alucinações)
